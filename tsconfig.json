@@ -22,7 +22,11 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*":["./src/*"]
+      "@/*":["./src/*"],
+      "@layouts/*":["./src/layouts/*"],
+      "@views/*":["./src/views/*"],
+      "@plugins/*":["./src/plugins/*"],
+      "@stores/*":["./src/stores/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
