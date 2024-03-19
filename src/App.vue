@@ -1,12 +1,12 @@
 <template>
-  <AdminLayout v-if="userStore.userRole"></AdminLayout>
+  <AdminLayout v-if="checkAuth"></AdminLayout>
   <GuestLayout v-else></GuestLayout>
 </template>
 
 <script setup lang="ts">
-import AdminLayout from "@layouts/admin/admin.vue";
+import AdminLayout from "@layouts/admin/AdminLayout.vue";
 import GuestLayout from "@layouts/guest/guest.vue";
-import { useUserStore } from "@stores/user";
+import { useAuthStore } from "./stores/Auth/auth";
 
-const userStore = useUserStore();
+const { checkAuth } = useAuthStore();
 </script>
