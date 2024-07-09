@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@popperjs/core": "^2.11.8",
     "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
     "pinia": "^2.1.7",
     "vite-plugin-vuetify": "^2.0.3",
     "vue": "^3.4.21",
@@ -25,6 +27,7 @@
     "@vitest/coverage-v8": "^1.4.0",
     "@vue/test-utils": "^2.4.5",
     "jsdom": "latest",
+    "sass": "^1.77.6",
     "typescript": "^5.4.2",
     "vite": "^5.1.6",
     "vitest": "^1.4.0",

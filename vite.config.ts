@@ -12,6 +12,7 @@ export default defineConfig({
       "@stores": path.resolve(__dirname, "src/stores/"),
       "@views": path.resolve(__dirname, "src/views/"),
       "@plugins": path.resolve(__dirname, "src/plugins/"),
+      "@components": path.resolve(__dirname, "src/components/"),
     },
   },
   server: {

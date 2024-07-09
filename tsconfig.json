@@ -26,7 +26,8 @@
       "@layouts/*":["./src/layouts/*"],
       "@views/*":["./src/views/*"],
       "@plugins/*":["./src/plugins/*"],
-      "@stores/*":["./src/stores/*"]
+      "@stores/*":["./src/stores/*"],
+      "@components/*":["./src/components/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
