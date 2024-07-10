@@ -1,18 +1,10 @@
+import { Color } from "../Component.interface";
+
 export interface SButtonProps {
   type?: "button" | "submit" | "reset";
   text?: string;
   size?: "sm" | "lg";
-  color?:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
-    | "light"
-    | "dark"
-    | "link";
-
+  color?: Color;
   loading?: boolean;
   disabled?: boolean;
 }
