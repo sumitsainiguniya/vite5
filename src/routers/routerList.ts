@@ -4,13 +4,8 @@ import { defineAsyncComponent } from "vue";
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    component: () => defineAsyncComponent(() => import("@views/Home.vue")),
+    component: () => defineAsyncComponent(() => import("@views/user/UserList.vue")),
     meta: { requiresAuth: true },
-  },
-  {
-    path: "/login",
-    component: () =>
-      defineAsyncComponent(() => import("@views/Auth/Login.vue")),
   },
 ];
 
