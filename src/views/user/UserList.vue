@@ -3,13 +3,13 @@
   <v-data-table
     :headers="headers"
     :items="data"
-    items-per-page="5"
+    items-per-page="10"
     :items-per-page-options="[5, 10, 15, 20, 25]"
     :loading="tableLoading"
   >
     <!-- Loading slot for skeleton loader -->
     <template v-slot:loading>
-      <v-skeleton-loader type="table-row@5"></v-skeleton-loader>
+      <v-skeleton-loader type="table-row@10"></v-skeleton-loader>
     </template>
     <!-- Toolbar slot for adding a title and an "Add Item" button -->
     <template v-slot:top>

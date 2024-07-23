@@ -7,7 +7,7 @@
         <!-- Card title, dynamically showing "Create User" or "Edit User" based on action -->
         <v-card-title>
           <span class="text-h5">{{
-            action === "create" ? "Create User" : "Edit User"
+            action === "create" ? "Create User" : `#${data.id} Edit User`
           }}</span>
         </v-card-title>
 
@@ -92,9 +92,9 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <!-- Cancel button to close the dialog -->
+          <!-- Close button to close the dialog -->
           <v-btn color="blue-darken-1" variant="text" @click="emit('close')">
-            Cancel
+            Close
           </v-btn>
           <!-- Submit button with loading state and dynamic text -->
           <v-btn

@@ -30,19 +30,18 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <!-- Cancel button to close the dialog -->
+          <!-- Close button to close the dialog -->
           <v-btn color="blue-darken-1" variant="text" @click="emit('close')"
-            >Cancel</v-btn
+            >Close</v-btn
           >
-          <!-- OK button to submit the form, with loading state -->
+          <!-- Confirmed button to submit the form, with loading state -->
           <v-btn
             color="blue-darken-1"
             :loading="btnLoading"
             variant="text"
             type="submit"
-            >OK</v-btn
+            >Confirmed</v-btn
           >
-          <v-spacer></v-spacer>
         </v-card-actions>
       </v-card>
     </v-form>
