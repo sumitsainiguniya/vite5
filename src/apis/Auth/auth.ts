@@ -1,25 +1,55 @@
 import { axiosInstance } from "@/plugins/axios";
+export interface LoginRequest {
+  email: string;
+  password: string;
+}
+
+export interface RegisterRequest {
+  name: string;
+  email: string;
+  password: string;
+  password_confirmation: string;
+  manager_id: string;
+}
+
+export interface LoginResponse {
+  success: boolean;
+  message: string;
+  token: string;
+}
+
+export interface RegisterResponse {
+  success: boolean;
+  message: string;
+}
+export interface RegisterErrorResponse {
+  errors: {
+    [key: string]: string[];
+  };
+  message: string;
+}
 
 export const AuthAPI = {
   /**
    * Login API
-   * This function sends a POST request to the '/auth/login' endpoint with the user's email and password.
+   * This function sends a POST request to the '/login' endpoint with the user's email and password.
    * @function login
-   * @param data : { email: string; password: string }
+   * @param data : LoginRequest
    * @returns A Promise that resolves to the response of the API call.
    */
-  login: (data: { email: string; password: string }) =>
-    axiosInstance.post("/auth/login", data),
+  login: (data: LoginRequest) => {
+    return axiosInstance.post<LoginResponse>("/login", data);
+  },
 
   /**
    * Register API
-   * This function sends a POST request to the '/auth/register' endpoint with the user's email and password.
+   * This function sends a POST request to the '/register' endpoint with the user's email and password.
    * @function register
-   * @param data : { email: string; password: string }
+   * @param data : RegisterRequest
    * @returns A Promise that resolves to the response of the API call.
    */
-  register: (data: { email: string; password: string }) =>
-    axiosInstance.post("/auth/register", data),
+  register: (data: RegisterRequest) =>
+    axiosInstance.post<RegisterResponse>("/register", data),
 
   /**
    * Logout API

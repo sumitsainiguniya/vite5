@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src/"),
+      "@apis": path.resolve(__dirname, "src/apis/"),
       "@layouts": path.resolve(__dirname, "src/layouts/"),
       "@stores": path.resolve(__dirname, "src/stores/"),
       "@views": path.resolve(__dirname, "src/views/"),
@@ -16,6 +17,6 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3001,
+    port: 3000,
   },
 });
